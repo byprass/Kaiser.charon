@@ -8,7 +8,7 @@ from datetime import datetime
 from collections import Counter, defaultdict
 from itertools import combinations
 
-DB_PATH = '/home/ubuntu/projects/charon/charon.sqlite'
+DB_PATH = '/home/ubuntu/Kaiser.charon/charon.sqlite'
 
 def safe_float(v, default=None):
     """Parse float, return default if None/empty/error."""

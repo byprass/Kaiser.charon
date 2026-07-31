@@ -3,7 +3,7 @@
 
 import sqlite3, json, sys
 
-DB_PATH = '/home/ubuntu/projects/charon/charon.sqlite'
+DB_PATH = '/home/ubuntu/Kaiser.charon/charon.sqlite'
 
 def extract(row):
     cj = json.loads(row['candidate_json']) if row['candidate_json'] else {}

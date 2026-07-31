@@ -2,7 +2,7 @@
 # Charon Silent Monitor - Only outputs when problems detected
 # Designed for cron: silent = OK, output = alert
 
-DB="/home/ubuntu/projects/charon/charon.sqlite"
+DB="/home/ubuntu/Kaiser.charon/charon.sqlite"
 NOW=$(date +%s)
 
 # Quick checks - exit silently if all OK

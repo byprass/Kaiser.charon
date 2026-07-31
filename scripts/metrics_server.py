@@ -4,7 +4,7 @@ import sqlite3, json, time, os
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from urllib.parse import urlparse, parse_qs
 
-DB = "/home/ubuntu/projects/charon/charon.sqlite"
+DB = "/home/ubuntu/Kaiser.charon/charon.sqlite"
 
 
 def q(sql, params=()):

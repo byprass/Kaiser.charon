@@ -15,7 +15,7 @@ Output: ranked feature list + top filter combos + daily consistency table.
 import sqlite3, json, csv, sys
 from datetime import datetime, timedelta
 
-DB_PATH = '/home/ubuntu/projects/charon/charon.sqlite'
+DB_PATH = '/home/ubuntu/Kaiser.charon/charon.sqlite'
 
 def safe_num(d, *keys, default=0):
     for k in keys:

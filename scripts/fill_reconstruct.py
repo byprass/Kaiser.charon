@@ -16,7 +16,7 @@ Usage: python3 scripts/fill_reconstruct.py [--days 7] [--limit N] [--latency 2]
 import sqlite3, json, time, argparse, urllib.request, urllib.error
 from statistics import median
 
-DB = "/home/ubuntu/projects/charon/charon.sqlite"
+DB = "/home/ubuntu/Kaiser.charon/charon.sqlite"
 CHART = "https://datapi.jup.ag/v2/charts/{mint}?interval=1_SECOND&to={to_ms}&candles=90&type=price&quote=usd"
 
 # ---- friction knobs (analytic grid applied after fills are fetched) ----
@@ -142,7 +142,7 @@ def main():
                 if used:
                     print(f"{L:>6}s {fee*100:>7.2f}% {tip:>8.4f} {tot:>+9.2f} {tot-paper_tot:>+9.2f} {100*wins/used:>5.1f}% {tot/used*1000:>+8.1f}")
     # persist per-trade for inspection
-    out = "/home/ubuntu/projects/charon/reports/fill_recon.json"
+    out = "/home/ubuntu/Kaiser.charon/reports/fill_recon.json"
     with open(out, "w") as f:
         json.dump({"n": n, "paper_norm_sol": paper_tot,
                    "trades": [{"size": r["size"], "paper_entry": r["paper_entry"], "paper_exit": r["paper_exit"],

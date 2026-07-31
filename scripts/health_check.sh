@@ -2,7 +2,7 @@
 # Charon Health Monitor Script
 # Checks: process, signals, trades, config
 
-DB="/home/ubuntu/projects/charon/charon.sqlite"
+DB="/home/ubuntu/Kaiser.charon/charon.sqlite"
 LOG="/tmp/charon.log"
 
 echo "=== CHARON HEALTH CHECK $(date) ==="
@@ -12,7 +12,7 @@ echo -e "\n[PROCESS]"
 PIDS=$(pgrep -f "node index" | head -1)
 if [ -z "$PIDS" ]; then
     echo "❌ CRITICAL: Charon NOT running!"
-    cd /home/ubuntu/projects/charon && node index.js &
+    cd /home/ubuntu/Kaiser.charon && node index.js &
     echo "🔄 Auto-restarted Charon"
 else
     echo "✅ Charon running (PID: $PIDS)"

@@ -3,7 +3,7 @@
 import sqlite3, json
 import pandas as pd
 
-DB_PATH = "/home/ubuntu/projects/charon/charon.sqlite"
+DB_PATH = "/home/ubuntu/Kaiser.charon/charon.sqlite"
 
 db = sqlite3.connect(f"file:{DB_PATH}?mode=ro", uri=True)
 db.row_factory = sqlite3.Row
